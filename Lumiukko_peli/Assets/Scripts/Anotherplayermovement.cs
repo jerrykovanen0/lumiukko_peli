@@ -21,12 +21,9 @@ public class Anotherplayermovement : MonoBehaviour
     void FixedUpdate()
     {
 
-        Keyboard keyboard =
+       
 
-
-        Vector3 moveValue = moveAction.ReadValue<Vector3>();
-
-        if 
+       
 
 
     }
