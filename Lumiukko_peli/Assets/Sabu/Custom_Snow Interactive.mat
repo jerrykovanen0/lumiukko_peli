@@ -81,7 +81,7 @@ Material:
     - _SnowTextureOpacity: 0.011
     - _SnowTextureScale: 0.502
     - _SparkCutoff: 0.96
-    - _SparkleScale: 0.31
+    - _SparkleScale: 0.64
     - _Step: 0.5
     - _Tess: 32
     - _Toon_Ramp_Offset: 0
@@ -92,7 +92,7 @@ Material:
     - _PathColorIn: {r: 0.39716092, g: 0.42272213, b: 0.4811321, a: 1}
     - _PathColorOut: {r: 0.19339621, g: 0.8511299, b: 1, a: 1}
     - _RimColor: {r: 0, g: 0, b: 0, a: 1}
-    - _ShadowColor: {r: 0.504717, g: 0.9384243, b: 1, a: 1}
+    - _ShadowColor: {r: 0.15566039, g: 0.41199452, b: 1, a: 1}
     - _Toon_Ramp_Tinting: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
