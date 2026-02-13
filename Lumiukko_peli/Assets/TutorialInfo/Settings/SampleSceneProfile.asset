@@ -92,10 +92,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.SplitToning
   active: 0
   shadows:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: {r: 0.079432175, g: 0.17288356, b: 0.4811321, a: 1}
   highlights:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: {r: 1, g: 0.79304826, b: 0.3254717, a: 1}
   balance:
     m_OverrideState: 1
@@ -132,7 +132,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97c23e3b12dc18c42a140437e53d3951, type: 3}
   m_Name: Tonemapping
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   mode:
     m_OverrideState: 1
     m_Value: 0
@@ -178,7 +178,7 @@ MonoBehaviour:
     m_Value: 0
   intensity:
     m_OverrideState: 1
-    m_Value: 0.286
+    m_Value: 0.261
   response:
     m_OverrideState: 0
     m_Value: 0.91

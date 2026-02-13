@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Custom_Snow Interactive
-  m_Shader: {fileID: 4800000, guid: e47175af0f5843644a622a8ca6d348ef, type: 3}
+  m_Shader: {fileID: 4800000, guid: 94f7721497987ca478e7e123a87e452a, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -18,13 +18,26 @@ Material:
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
-  disabledShaderPasses: []
+  disabledShaderPasses:
+  - MOTIONVECTORS
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _BaseMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 2800000, guid: 931610e7ae6ee0f4f9cac16ca220fabf, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Main_Texture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Mask:
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Noise:
@@ -39,26 +52,47 @@ Material:
         m_Texture: {fileID: 2800000, guid: 3890ff13512878a439683afa080c8303, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _MaxTessDistance: 63.5
+    - _MaxTessDistance: 100
     - _NoiseScale: 0.1
-    - _NoiseWeight: 0.41
+    - _NoiseWeight: 0.19
     - _PathBlending: 3
+    - _QueueControl: 0
+    - _QueueOffset: 0
     - _RimPower: 20
-    - _SnowDepth: -1.21
-    - _SnowHeight: 0.779
+    - _Rim_Light_Brightness: 0
+    - _Rim_Power: 5
+    - _SnowDepth: 0.46
+    - _SnowHeight: 0.8
     - _SnowNormalStrength: 0.276
-    - _SnowTextureOpacity: 0
+    - _SnowTextureOpacity: 0.011
     - _SnowTextureScale: 0.502
-    - _SparkCutoff: 0.79
-    - _SparkleScale: 0.84
-    - _Tess: 269
+    - _SparkCutoff: 0.96
+    - _SparkleScale: 0.31
+    - _Step: 0.5
+    - _Tess: 32
+    - _Toon_Ramp_Offset: 0
+    - _Toon_Ramp_Smoothness: 0
     m_Colors:
-    - _Color: {r: 0.4457547, g: 0.52086437, b: 0.5943396, a: 1}
-    - _PathColorIn: {r: 0.5, g: 0.5, b: 0.7, a: 1}
-    - _PathColorOut: {r: 0.0093449615, g: 0.19691776, b: 0.3962264, a: 1}
-    - _RimColor: {r: 0.754717, g: 0.6777134, b: 0.6016376, a: 1}
-    - _ShadowColor: {r: 0.20705767, g: 0.8428763, b: 0.9339623, a: 1}
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 0.5377358, g: 0.5377358, b: 0.5377358, a: 1}
+    - _PathColorIn: {r: 0.39716092, g: 0.42272213, b: 0.4811321, a: 1}
+    - _PathColorOut: {r: 0.19339621, g: 0.8511299, b: 1, a: 1}
+    - _RimColor: {r: 0, g: 0, b: 0, a: 1}
+    - _ShadowColor: {r: 0.504717, g: 0.9384243, b: 1, a: 1}
+    - _Toon_Ramp_Tinting: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
