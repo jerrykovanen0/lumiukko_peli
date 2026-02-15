@@ -89,7 +89,7 @@ Material:
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 0.5377358, g: 0.5377358, b: 0.5377358, a: 1}
-    - _PathColorIn: {r: 0.39716092, g: 0.42272213, b: 0.4811321, a: 1}
+    - _PathColorIn: {r: 0.34442863, g: 0.4123887, b: 0.5660378, a: 1}
     - _PathColorOut: {r: 0.19339621, g: 0.8511299, b: 1, a: 1}
     - _RimColor: {r: 0, g: 0, b: 0, a: 1}
     - _ShadowColor: {r: 0.15566039, g: 0.41199452, b: 1, a: 1}
