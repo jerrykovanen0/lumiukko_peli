@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.Animations.Rigging;
 using static UnityEngine.GraphicsBuffer;
 
+
 public class testIK : MonoBehaviour
 {
     [SerializeField]
@@ -12,47 +13,64 @@ public class testIK : MonoBehaviour
     [SerializeField]
     private Transform _source;
     [SerializeField]
-    private float minDistance;
-    [SerializeField]
-    Vector3 targetpos;
-    [SerializeField]
-    Vector3 sourcePos;
-
     TwoBoneIKConstraint constraint;
     TwoBoneIKConstraint HandsIK;
+    [SerializeField]
+    private Transform Trigger;
 
 
+    private void OnTriggerEnter(Collider other)
+    {
+        
+        constraint.data.targetPositionWeight = 1.0f;
+        constraint.data.targetRotationWeight = 1.0f;
+
+        
+
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        constraint.data.targetPositionWeight = 0.0f;
+        constraint.data.targetRotationWeight = 0.0f;
+    }
 
 
     private void LateUpdate()
     {
      //   constraint.data.targetPositionWeight = 0.7f;
-     //   float targetWeight = Input.GetKey(KeyCode.Space) ? 1f : 0f;
+      //  float targetWeight = Input.GetKey(KeyCode.Space) ? 1f : 0f;
       //  HandsIK.weight = Mathf.Lerp(HandsIK.weight, targetWeight, Time.deltaTime * 8f);
      //   HandsIK.weight = 0.7f;
 
-       if (Input.GetKey(KeyCode.V))
-        {
-            constraint.data.targetPositionWeight = 1.0f;
-        }
+ //      if (Input.GetKey(KeyCode.V))
+ //       {
+ //           constraint.data.targetPositionWeight = 1.0f;
+ //           constraint.data.targetRotationWeight = 1.0f;
+ //       }
 
-        //      if (Vector3.Distance(sourcePos, targetpos) <= minDistance)
-        //        {
-        //            transform.position = Vector3.Lerp(this.transform.position, _target.transform.position, _speed * Time.deltaTime);
-        //        transform.rotation = Quaternion.Euler(_target.transform.rotation.eulerAngles);
-        //         constraint.data.targetPositionWeight = 1.0f;
-        //     }       //raycast try and look on that!! 
+ //       else
+  //      {
+  //          constraint.data.targetPositionWeight = 0.0f;
+  //          constraint.data.targetRotationWeight = 0.0f;
+  //      }
 
-            //   if (Physics.Raycast(transform.position, Vector3.forward, 6.0f))
-            // {
-            //      transform.position = Vector3.Lerp(this.transform.position, _target.transform.position, _speed * Time.deltaTime);
-            //      transform.rotation = Quaternion.Euler(_target.transform.rotation.eulerAngles);
-            //      constraint.data.targetPositionWeight = 1.0f;
-            //  }
-       else
-        {
-            constraint.data.targetPositionWeight = 0.0f;
-        }
+      //         if (Physics.Raycast(transform.position, Vector3.forward, 6.0f))
+      //       {
+       //          transform.position = Vector3.Lerp(this.transform.position, _target.transform.position, _speed * Time.deltaTime);
+       //          transform.rotation = Quaternion.Euler(_target.transform.rotation.eulerAngles);
+       //          constraint.data.targetPositionWeight = 1.0f;
+      //            constraint.data.targetRotationWeight = 1.0f;
+      //   }
+
+
+     //   if(Collision.tag ==)
+
+
+     //   else
+      //  {
+      //      constraint.data.targetPositionWeight = 0.0f;
+     //       constraint.data.targetRotationWeight = 0.0f;
+      //  }
      
         
     }
