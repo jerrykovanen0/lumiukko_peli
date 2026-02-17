@@ -4,21 +4,53 @@ using System.Collections.Generic;
 
 public class SizeIncrease : MonoBehaviour
 {
+    
+    public Rigidbody rb;
     [SerializeField]
     private GameObject sphere;
     [SerializeField]
     private Vector3 scaleChange, positionChange;
 
+    public float magnitude; 
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody>();
     }
 
+
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
+        
+        if (rb.linearVelocity)
+        {
+            scaleChange = new Vector3(0.01f, 0.01f, 0.01f);
+            positionChange = new Vector3(0.0f, 0.005f, 0.0f);
+            transform.hasChanged = false;
+        }
+        // https://stackoverflow.com/questions/69831739/how-can-i-get-a-component-of-a-rigidbodies-velocity
+        // https://docs.unity3d.com/6000.3/Documentation/ScriptReference/Rigidbody2D-linearVelocity.html
+
+        //     if (transform.hasChanged)
+        //      {
+        //         scaleChange = new Vector3(0.01f, 0.01f, 0.01f);
+        //         positionChange = new Vector3(0.0f, 0.005f, 0.0f);
+        //         transform.hasChanged = false;
+        //    }
+        sphere.transform.localScale += scaleChange;
+        sphere.transform.position += positionChange;
+
+        // Move upwards when the sphere hits the floor or downwards
+        // when the sphere scale extends 1.0f.
+        if (sphere.transform.localScale.y < 0.1f || sphere.transform.localScale.y > 1.0f)
+        {
+            scaleChange = -scaleChange;
+            positionChange = -positionChange;
+            transform.hasChanged = false;
+        }
+        transform.hasChanged = false;
         
     }
 }
