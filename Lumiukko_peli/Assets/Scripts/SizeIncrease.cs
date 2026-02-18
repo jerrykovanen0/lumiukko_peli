@@ -1,18 +1,22 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
+using Unity.VisualScripting;
 
 public class SizeIncrease : MonoBehaviour
 {
-    
+    [SerializeField]
     public Rigidbody rb;
     [SerializeField]
     private GameObject sphere;
     [SerializeField]
     private Vector3 scaleChange, positionChange;
-
-    public float magnitude; 
-
+    [SerializeField]
+    private Vector3 SnowballMovement;
+  //  [SerializeField]
+  //  public float magnitude;
+    
 
     void Start()
     {
@@ -24,11 +28,12 @@ public class SizeIncrease : MonoBehaviour
     void LateUpdate()
     {
         
-        if (rb.linearVelocity)
+        if (rb.linearVelocity.magnitude > 2)
         {
-            scaleChange = new Vector3(0.01f, 0.01f, 0.01f);
-            positionChange = new Vector3(0.0f, 0.005f, 0.0f);
-            transform.hasChanged = false;
+            scaleChange = new Vector3(0.0002f, 0.0002f, 0.0002f);
+            positionChange = new Vector3(0.000f, 0.00010f, 0.000f);
+            rb.mass += 0.001f;
+
         }
         // https://stackoverflow.com/questions/69831739/how-can-i-get-a-component-of-a-rigidbodies-velocity
         // https://docs.unity3d.com/6000.3/Documentation/ScriptReference/Rigidbody2D-linearVelocity.html
@@ -48,9 +53,11 @@ public class SizeIncrease : MonoBehaviour
         {
             scaleChange = -scaleChange;
             positionChange = -positionChange;
-            transform.hasChanged = false;
+           transform.hasChanged = false;
         }
         transform.hasChanged = false;
+        
+        
         
     }
 }

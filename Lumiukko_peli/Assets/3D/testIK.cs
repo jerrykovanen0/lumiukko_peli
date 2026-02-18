@@ -18,7 +18,11 @@ public class testIK : MonoBehaviour
     [SerializeField]
     private Transform Trigger;
 
-
+    private void Awake()
+    {
+        constraint.data.targetPositionWeight = 0.0f;
+        constraint.data.targetRotationWeight = 0.0f;
+    }
     private void OnTriggerEnter(Collider other)
     {
         
