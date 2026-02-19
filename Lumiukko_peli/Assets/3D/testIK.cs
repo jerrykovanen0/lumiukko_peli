@@ -7,7 +7,7 @@ using static UnityEngine.GraphicsBuffer;
 public class testIK : MonoBehaviour
 {
     [SerializeField]
-    private Transform _target; // Where the hands need to go
+    public GameObject _target; // Where the hands need to go
     [SerializeField]
     private float _speed;
     [SerializeField]
