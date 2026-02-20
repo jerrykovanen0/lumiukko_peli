@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Animations;
+using System.Collections.Generic;
 
 
 
@@ -11,7 +12,10 @@ public class MakeSnowball : MonoBehaviour
     public GameObject SnowballPrefab;
     [SerializeField]
     public GameObject SpawnPointObject;
-    
+    [SerializeField]
+    public GameObject AttachedTarget;
+    [SerializeField]
+    public Transform parentTarget; 
 
     private void Start()
     {
@@ -25,12 +29,13 @@ public class MakeSnowball : MonoBehaviour
         Spawnpoint = SpawnPointObject.transform.position;
         if (Input.GetKeyDown(KeyCode.X))
         {
-            Instantiate(SnowballPrefab, Spawnpoint , Quaternion.identity);
+            GameObject NewSnowball = Instantiate(SnowballPrefab, Spawnpoint , Quaternion.identity);
+            NewSnowball.transform.Translate(0,0,0);
+            AttachedTarget.transform.SetParent(NewSnowball.transform);
+            AttachedTarget.transform.position = NewSnowball.transform.position;
 
-            // https://discussions.unity.com/t/how-to-add-child-gameobjects-to-parent-in-script/73903
-            // https://discussions.unity.com/t/deleting-specific-child-object/572491
         }
-
+        
     }
 
 

@@ -51,7 +51,6 @@ public class testIK : MonoBehaviour
  //           constraint.data.targetPositionWeight = 1.0f;
  //           constraint.data.targetRotationWeight = 1.0f;
  //       }
-
  //       else
   //      {
   //          constraint.data.targetPositionWeight = 0.0f;

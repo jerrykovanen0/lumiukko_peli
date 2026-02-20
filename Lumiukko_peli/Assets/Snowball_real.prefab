@@ -1,76 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1827252569667640420
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5673844463066432994}
-  - component: {fileID: 1684131397684204710}
-  - component: {fileID: 8090756066061755256}
-  m_Layer: 0
-  m_Name: Trigger
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5673844463066432994
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1827252569667640420}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
-  m_ConstrainProportionsScale: 1
-  m_Children: []
-  m_Father: {fileID: 7315860669368324340}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &1684131397684204710
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1827252569667640420}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 1.3
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8090756066061755256
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1827252569667640420}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8aa5cf67402c8c94e93d92a9af4fcd3e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::testIK
-  _target: {fileID: 7315860669368324340}
-  _speed: 10
-  _source: {fileID: 0}
-  constraint: {fileID: 0}
-  Trigger: {fileID: 5673844463066432994}
 --- !u!1 &3632917586309287091
 GameObject:
   m_ObjectHideFlags: 0
@@ -85,7 +14,6 @@ GameObject:
   - component: {fileID: 8360733440518360419}
   - component: {fileID: 6237581476676849340}
   - component: {fileID: 4647280293655691575}
-  - component: {fileID: 1989225091494970885}
   m_Layer: 0
   m_Name: Snowball_real
   m_TagString: Untagged
@@ -107,7 +35,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6917716444061193146}
-  - {fileID: 5673844463066432994}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6936809715486404225
@@ -232,18 +159,6 @@ MonoBehaviour:
   scaleChange: {x: 0, y: 0, z: 0}
   positionChange: {x: 0, y: 0, z: 0}
   SnowballMovement: {x: 0, y: 0, z: 0}
---- !u!114 &1989225091494970885
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3632917586309287091}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8afa0006ee9586a479794fe6b43ceabc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
 --- !u!1 &6303715934014766275
 GameObject:
   m_ObjectHideFlags: 0
