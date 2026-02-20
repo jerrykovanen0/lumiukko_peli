@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.Animations;
 using System.Collections.Generic;
+using UnityEngine.Animations.Rigging;
 
 
 
@@ -16,6 +17,8 @@ public class MakeSnowball : MonoBehaviour
     public GameObject AttachedTarget;
     [SerializeField]
     public Transform parentTarget; 
+  
+
 
     private void Start()
     {
@@ -33,6 +36,8 @@ public class MakeSnowball : MonoBehaviour
             NewSnowball.transform.Translate(0,0,0);
             AttachedTarget.transform.SetParent(NewSnowball.transform);
             AttachedTarget.transform.position = NewSnowball.transform.position;
+
+            Debug.Log("X key down");
 
         }
         

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
 using Unity.VisualScripting;
+using System;
 
 public class SizeIncrease : MonoBehaviour
 {
@@ -18,8 +19,10 @@ public class SizeIncrease : MonoBehaviour
   //  public float magnitude;
     
 
+
     void Start()
     {
+        Rigidbody rigidbody = GetComponent<Rigidbody>();
         rb = GetComponent<Rigidbody>();
     }
 
@@ -27,7 +30,9 @@ public class SizeIncrease : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
-        
+        enabled = true;
+        enabled = false;
+
         if (rb.linearVelocity.magnitude > 2)
         {
             scaleChange = new Vector3(0.0002f, 0.0002f, 0.0002f);
@@ -56,8 +61,12 @@ public class SizeIncrease : MonoBehaviour
            transform.hasChanged = false;
         }
         transform.hasChanged = false;
-        
-        
-        
+
+
+
+
     }
+
+
+
 }
