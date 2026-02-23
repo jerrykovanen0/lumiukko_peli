@@ -13,29 +13,67 @@ public class testIK : MonoBehaviour
     [SerializeField]
     private Transform _source;
     [SerializeField]
+    public GameObject PlayerCol;
+    [SerializeField]
     TwoBoneIKConstraint constraint;
     TwoBoneIKConstraint HandsIK;
     [SerializeField]
     private Transform Trigger;
+    [SerializeField]
+    Animator animator;
+
+    
 
     private void Awake()
     {
         constraint.data.targetPositionWeight = 0.0f;
         constraint.data.targetRotationWeight = 0.0f;
+        animator.SetBool("StartPushing", false);
+
+    }
+
+    private void FixedUpdate()
+    {
+     
+
+    }
+
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.name == "PlayerCol")
+        {
+
+            constraint.data.targetPositionWeight = 1.0f;
+            constraint.data.targetRotationWeight = 1.0f;
+            animator.SetBool("StartPushing", true);
+            Debug.Log("Enter COLLISION");
+        }
+
+
+
+
     }
     private void OnTriggerEnter(Collider other)
     {
         
         constraint.data.targetPositionWeight = 1.0f;
         constraint.data.targetRotationWeight = 1.0f;
+        animator.SetBool("StartPushing", true);
+        Debug.Log("Enter");
 
-        
+
 
     }
+
     private void OnTriggerExit(Collider other)
     {
         constraint.data.targetPositionWeight = 0.0f;
         constraint.data.targetRotationWeight = 0.0f;
+        animator.SetBool("StartPushing", false);
+        Debug.Log("Exit");
+
+
     }
 
 

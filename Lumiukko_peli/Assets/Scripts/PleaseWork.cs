@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Animations;
 
 /*
     This script provides jumping and movement in Unity 3D - Gatsby
@@ -28,6 +29,9 @@ public class Player : MonoBehaviour
     private float playerHeight;
     private float raycastDistance;
 
+    Animator animator;
+    
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -41,6 +45,7 @@ public class Player : MonoBehaviour
         // Hides the mouse
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -61,7 +66,7 @@ public class Player : MonoBehaviour
     void MovePlayer()
     {
 
-        Vector3 movement = (transform.right * moveHorizontal + transform.forward * moveForward).normalized;
+        Vector3 movement = transform.right * moveHorizontal + transform.forward * moveForward;
         Vector3 targetVelocity = movement * MoveSpeed;
         
 
@@ -70,19 +75,22 @@ public class Player : MonoBehaviour
         velocity.x = targetVelocity.x;
         velocity.z = targetVelocity.z;
         rb.linearVelocity = velocity;
-
+        animator.SetBool("WalkWhenMoved", true);
 
         // If we aren't moving and are on the ground, stop velocity so we don't slide
         if (isGrounded && moveHorizontal == 0 && moveForward == 0)
         {
             rb.linearVelocity = new Vector3(0, rb.linearVelocity.y, 0);
+            animator.SetBool("WalkWhenMoved", false);
         }
+        transform.position += new Vector3(targetVelocity.x, 0, targetVelocity.z) * Time.deltaTime;
+
     }
     void RotateCamera()
     {
+
         float horizontalRotation = Input.GetAxis("Horizontal");
         transform.Rotate(0, horizontalRotation, 0);
-
 
 
     }

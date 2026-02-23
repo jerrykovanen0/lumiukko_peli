@@ -31,9 +31,9 @@ public class SizeIncrease : MonoBehaviour
     void LateUpdate()
     {
         enabled = true;
-        enabled = false;
+       
 
-        if (rb.linearVelocity.magnitude > 2)
+        if (rb.linearVelocity.magnitude > 1)
         {
             scaleChange = new Vector3(0.0002f, 0.0002f, 0.0002f);
             positionChange = new Vector3(0.000f, 0.00010f, 0.000f);

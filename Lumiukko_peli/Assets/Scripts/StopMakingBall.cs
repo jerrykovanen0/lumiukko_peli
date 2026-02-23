@@ -7,7 +7,7 @@ using Unity.VisualScripting;
 public class StopMakingBall : MonoBehaviour
 {
     SizeIncrease LateUpdate;
-    private SizeIncrease sizeIncrease;
+    SizeIncrease sizeIncrease;
 
     public void Start()
     {
@@ -15,7 +15,7 @@ public class StopMakingBall : MonoBehaviour
         sizeIncrease.enabled = true;
     }
 
-    public void StopSizeVar()
+    public void Update()
     {
         if (Input.GetKeyDown(KeyCode.Z))
         {

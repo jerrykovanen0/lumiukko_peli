@@ -256,6 +256,11 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!1 &36711435 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 812924113821712687, guid: c19b5af1146eab442be9c8ae40047774, type: 3}
+  m_PrefabInstance: {fileID: 1098025831485890978}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &99222276
 GameObject:
   m_ObjectHideFlags: 3
@@ -439,6 +444,14 @@ PrefabInstance:
       propertyPath: _target
       value: 
       objectReference: {fileID: 638507983}
+    - target: {fileID: 4624872312430186720, guid: 5f0afa23df6b006498a816cefb68f631, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1736387976}
+    - target: {fileID: 4624872312430186720, guid: 5f0afa23df6b006498a816cefb68f631, type: 3}
+      propertyPath: PlayerCol
+      value: 
+      objectReference: {fileID: 36711435}
     - target: {fileID: 4624872312430186720, guid: 5f0afa23df6b006498a816cefb68f631, type: 3}
       propertyPath: constraint
       value: 
@@ -1782,6 +1795,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1062678843956117, guid: c19b5af1146eab442be9c8ae40047774, type: 3}
   m_PrefabInstance: {fileID: 1098025831485890978}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &1736387976 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7411153359022583313, guid: c19b5af1146eab442be9c8ae40047774, type: 3}
+  m_PrefabInstance: {fileID: 1098025831485890978}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1792231691 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8259331502633336675, guid: c19b5af1146eab442be9c8ae40047774, type: 3}
@@ -2088,6 +2106,14 @@ PrefabInstance:
       propertyPath: field of view
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 2771592731309354882, guid: c19b5af1146eab442be9c8ae40047774, type: 3}
+      propertyPath: m_Radius
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2771592731309354882, guid: c19b5af1146eab442be9c8ae40047774, type: 3}
+      propertyPath: m_Center.y
+      value: 0.9
+      objectReference: {fileID: 0}
     - target: {fileID: 3264391471744849787, guid: c19b5af1146eab442be9c8ae40047774, type: 3}
       propertyPath: m_Data.m_Mid
       value: 
@@ -2152,9 +2178,17 @@ PrefabInstance:
       propertyPath: AttachedTarget
       value: 
       objectReference: {fileID: 638507983}
+    - target: {fileID: 8443919026719251583, guid: c19b5af1146eab442be9c8ae40047774, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8718108036881525756, guid: c19b5af1146eab442be9c8ae40047774, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9133642880718115389, guid: c19b5af1146eab442be9c8ae40047774, type: 3}
+      propertyPath: MoveSpeed
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
