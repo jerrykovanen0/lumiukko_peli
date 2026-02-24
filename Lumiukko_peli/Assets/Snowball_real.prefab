@@ -31,9 +31,9 @@ Transform:
   m_GameObject: {fileID: 3632917586309287091}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.7580323, y: 0.5, z: -9.808222}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: -5.7580323, y: 0.25, z: -9.808222}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 6917716444061193146}
   m_Father: {fileID: 0}
@@ -71,7 +71,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 2ccdd6734d8330044b39eda28d1f0c64, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -172,6 +172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec6f54e291f296447a8f79e70d6cc503, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StopMakingBall
+  OtherBall: {fileID: 3632917586309287091}
 --- !u!1 &6303715934014766275
 GameObject:
   m_ObjectHideFlags: 0

@@ -35,9 +35,9 @@ public class SizeIncrease : MonoBehaviour
 
         if (rb.linearVelocity.magnitude > 1)
         {
-            scaleChange = new Vector3(0.0002f, 0.0002f, 0.0002f);
-            positionChange = new Vector3(0.000f, 0.00010f, 0.000f);
-            rb.mass += 0.001f;
+            scaleChange = new Vector3(0.0004f, 0.0004f, 0.0004f);
+            positionChange = new Vector3(0.000f, 0.00020f, 0.000f);
+            rb.mass += 0.002f;
 
         }
         // https://stackoverflow.com/questions/69831739/how-can-i-get-a-component-of-a-rigidbodies-velocity
