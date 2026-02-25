@@ -88,11 +88,11 @@ Material:
     - _Toon_Ramp_Smoothness: 0
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Color: {r: 0.5377358, g: 0.5377358, b: 0.5377358, a: 1}
+    - _Color: {r: 0.64014614, g: 0.66476715, b: 0.674, a: 1}
     - _PathColorIn: {r: 0.5377358, g: 0.5377358, b: 0.5377358, a: 1}
     - _PathColorOut: {r: 0.5377358, g: 0.5377358, b: 0.5377358, a: 1}
     - _RimColor: {r: 0, g: 0, b: 0, a: 1}
-    - _ShadowColor: {r: 0.15566039, g: 0.41199452, b: 1, a: 1}
+    - _ShadowColor: {r: 0.15686274, g: 0.31793854, b: 1, a: 1}
     - _Toon_Ramp_Tinting: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
