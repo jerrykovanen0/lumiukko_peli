@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_SnowballTEST
+  m_Name: M_tempSnow
   m_Shader: {fileID: 4800000, guid: 94f7721497987ca478e7e123a87e452a, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -24,6 +24,10 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _AlphaTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _BaseMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -66,6 +70,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _EnableExternalAlpha: 0
     - _MaxTessDistance: 10
     - _NoiseScale: 0.1
     - _NoiseWeight: 1.22
@@ -89,8 +94,10 @@ Material:
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 0.64014614, g: 0.66476715, b: 0.674, a: 1}
+    - _Flip: {r: 1, g: 1, b: 1, a: 1}
     - _PathColorIn: {r: 0.5377358, g: 0.5377358, b: 0.5377358, a: 1}
     - _PathColorOut: {r: 0.5377358, g: 0.5377358, b: 0.5377358, a: 1}
+    - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
     - _RimColor: {r: 0, g: 0, b: 0, a: 1}
     - _ShadowColor: {r: 0.15686274, g: 0.31793854, b: 1, a: 1}
     - _Toon_Ramp_Tinting: {r: 0, g: 0, b: 0, a: 0}
