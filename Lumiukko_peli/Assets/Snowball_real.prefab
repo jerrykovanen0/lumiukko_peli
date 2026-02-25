@@ -172,7 +172,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec6f54e291f296447a8f79e70d6cc503, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StopMakingBall
-  OtherBall: {fileID: 3632917586309287091}
+  OtherBall: {fileID: 0}
+  CurrentBall: {fileID: 0}
 --- !u!1 &6303715934014766275
 GameObject:
   m_ObjectHideFlags: 0
