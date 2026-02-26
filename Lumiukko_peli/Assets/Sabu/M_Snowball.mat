@@ -56,7 +56,7 @@ Material:
     - _Tess: 1
     - _Tessellation: 24.1
     m_Colors:
-    - _Color: {r: 0.5556849, g: 0.5891096, b: 0.61, a: 1}
+    - _Color: {r: 0.64014614, g: 0.66476715, b: 0.674, a: 1}
     - _PathColorIn: {r: 0.5, g: 0.5, b: 0.7, a: 1}
     - _PathColorOut: {r: 0.5, g: 0.5, b: 0.7, a: 1}
     - _RimColor: {r: 0, g: 0, b: 0, a: 1}

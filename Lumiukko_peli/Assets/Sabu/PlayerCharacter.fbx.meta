@@ -15,7 +15,7 @@ ModelImporter:
       name: M_playerFace
     second: {fileID: 2100000, guid: ad7bc93fddd9cdd409b432dc00dca52d, type: 2}
   materials:
-    materialImportMode: 2
+    materialImportMode: 0
     materialName: 0
     materialSearch: 1
     materialLocation: 1
