@@ -19,6 +19,13 @@ Shader "Custom/Snow Interactive"
         _Normal("Snow Normal", 2D) = "bump" {}
         _SnowNormalStrength("Snow Normal Strength", Range(0,1)) = 0.3
         [HDR]_ShadowColor("Shadow Color", Color) = (0.5,0.5,0.7,1)
+	_ToonThreshold("Toon Shadow Threshold", Range(0,1)) = 0.5
+	_ToonSoftness("Toon Shadow Softness", Range(0.001,0.5)) = 0.1
+_LightBoostStrength("Light Boost Strength", Range(0,3)) = 1
+_LightBoostThreshold("Light Boost Threshold", Range(0,1)) = 0.75
+_LightBoostSoftness("Light Boost Softness", Range(0.01,0.5)) = 0.15
+[HDR]_LightBoostColor("Light Boost Color", Color) = (1,1,1,1)
+
 
         [Header(Sparkles)]
         _SparkleScale("Sparkle Scale", Range(0,10)) = 10
@@ -70,54 +77,89 @@ Shader "Custom/Snow Interactive"
             float _SparkCutoff;
             float _SnowTextureOpacity;
             float _SnowTextureScale;
-            float _SnowNormalStrength;
+	float _ToonThreshold;
+	float _ToonSoftness;
+float _LightBoostStrength;
+float _LightBoostThreshold;
+float _LightBoostSoftness;
+float4 _LightBoostColor;
 
             half4 frag(Varyings2 IN) : SV_Target
             {
+                // === Base Color ===
                 float3 snowTex = tex2D(_MainTex, IN.worldPos.xz * _SnowTextureScale).rgb;
-                float3 baseColor = lerp(_Color.rgb,
-                                        snowTex * _Color.rgb,
-                                        _SnowTextureOpacity);
 
+                float3 baseColor = lerp(
+                    _Color.rgb,
+                    snowTex * _Color.rgb,
+                    _SnowTextureOpacity
+                );
+
+                // === Normal Mapping ===
                 float3 normalTS = UnpackNormal(tex2D(_Normal, IN.worldPos.xz));
+
                 float3 normalWS =
                     normalTS.x * IN.tangent +
                     normalTS.y * IN.bitangent +
                     normalTS.z * IN.normal;
 
+                normalWS = normalize(normalWS);
+
+                // === Main Light ===
                 half4 shadowCoord = TransformWorldToShadowCoord(IN.worldPos);
                 Light mainLight = GetMainLight(shadowCoord);
 
+                float NdotL = saturate(dot(normalWS, mainLight.direction));
+
+                // Toon step (adjust threshold here)
+                //float toon = smoothstep(0.3, 0.7, NdotL);
+float toon = smoothstep(
+    _ToonThreshold - _ToonSoftness,
+    _ToonThreshold + _ToonSoftness,
+    NdotL
+);
+
+
+
                 float shadowAtten = mainLight.shadowAttenuation;
 
-                // Colored shadow blend
-                float3 shadowTint =
-                    lerp(_ShadowColor.rgb, float3(1,1,1), shadowAtten);
+                float lightMask = toon * shadowAtten;
 
-                float3 lighting =
-                    baseColor *
-                    mainLight.color *
-                    shadowTint;
+                float3 lightColor = lerp(
+                    _ShadowColor.rgb,
+                    mainLight.color.rgb,
+                    lightMask
+                );
 
-                // Sparkles (mesh UVs)
-                float sparkle =
-                    tex2D(_SparkleNoise, IN.uv * _SparkleScale).r;
+                float3 lighting = baseColor * lightColor;
+// === Soft Light Boost (Stylized Highlight) ===
+float lightBoostMask = smoothstep(
+    _LightBoostThreshold - _LightBoostSoftness,
+    _LightBoostThreshold + _LightBoostSoftness,
+    NdotL
+);
 
-                lighting += step(_SparkCutoff, sparkle) * 4;
+lighting += _LightBoostColor.rgb *
+            lightBoostMask *
+            _LightBoostStrength *
+            lightMask;   // keeps it only in lit areas
 
-                // Rim
-                float rim =
-                    1 - saturate(dot(normalize(normalWS),
-                                     normalize(IN.viewDir)));
+                // Ambient boost (prevents gray look)
+                lighting += baseColor * unity_AmbientSky.rgb * 0.3;
 
+                // === Sparkles ===
+                float sparkle = tex2D(_SparkleNoise, IN.uv * _SparkleScale).r;
+                lighting += step(_SparkCutoff, sparkle) * 3;
+
+                // === Rim Lighting ===
+                float rim = 1.0 - saturate(dot(normalWS, normalize(IN.viewDir)));
                 lighting += _RimColor.rgb * pow(rim, _RimPower);
-
-                lighting += baseColor * unity_AmbientSky.rgb;
 
                 lighting = MixFog(lighting, IN.fogFactor);
 
-                return float4(lighting,1);
+                return float4(lighting, 1.0);
             }
+
             ENDHLSL
         }
 
