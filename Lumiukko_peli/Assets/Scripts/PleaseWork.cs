@@ -28,7 +28,7 @@ public class Player : MonoBehaviour
     private float groundCheckDelay = 0.3f;
     private float playerHeight;
     private float raycastDistance;
-
+    [SerializeField]
     Animator animator;
     
 
@@ -43,9 +43,9 @@ public class Player : MonoBehaviour
         raycastDistance = (playerHeight / 2) + 0.2f;
 
         // Hides the mouse
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
-        animator = GetComponent<Animator>();
+    //    Cursor.lockState = CursorLockMode.Locked;
+    //    Cursor.visible = false;
+     //   animator = GetComponent<Animator>();
     }
 
     void Update()

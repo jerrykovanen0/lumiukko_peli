@@ -19,6 +19,7 @@ public class StopMakingBall : MonoBehaviour
     Transform OtherBallPosition;
     private Transform target;
     float Test = 10;
+    float HeightOfBall;
 
     public void Start()
     {
@@ -49,7 +50,11 @@ public class StopMakingBall : MonoBehaviour
 
             {
                 Transform Pos = GameObject.FindWithTag("SnowBallTag").transform;
-          //      gameObject.transform.position = (Pos, 0, Pos);
+                float PosX = Pos.position.x;
+                float PosY = Pos.position.y;
+                float PosZ = Pos.position.z;
+                HeightOfBall = PosY + 3;
+                gameObject.transform.position = new Vector3(PosX, HeightOfBall, PosZ);
                 Debug.Log("There is Ball already");
             }
             else
