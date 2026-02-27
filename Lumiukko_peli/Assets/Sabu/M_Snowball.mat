@@ -60,7 +60,7 @@ Material:
     - _ToonSoftness: 0.436
     - _ToonThreshold: 0.29
     m_Colors:
-    - _Color: {r: 0.75, g: 0.8867727, b: 1, a: 1}
+    - _Color: {r: 0.89100003, g: 0.9506094, b: 1, a: 1}
     - _LightBoostColor: {r: 0.3443396, g: 0.5100486, b: 1, a: 1}
     - _PathColorIn: {r: 0.3135903, g: 0.3135903, b: 0.764151, a: 1}
     - _PathColorOut: {r: 0.5, g: 0.5, b: 0.7, a: 1}
