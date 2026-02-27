@@ -55,6 +55,11 @@ public class Player : MonoBehaviour
 
         RotateCamera();
 
+
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            animator.SetTrigger("FinishedBall");
+        }
     }
 
     void FixedUpdate()

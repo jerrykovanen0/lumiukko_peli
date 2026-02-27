@@ -39,21 +39,6 @@ public class testIK : MonoBehaviour
     }
 
 
-    void OnCollisionEnter(Collision collision)
-    {
-        if(collision.gameObject.name == "PlayerCol")
-        {
-
-            constraint.data.targetPositionWeight = 1.0f;
-            constraint.data.targetRotationWeight = 1.0f;
-           animator.SetBool("StartPushing", true);
-            Debug.Log("Enter COLLISION");
-        }
-
-
-
-
-    }
     private void OnTriggerEnter(Collider other)
     {
         

@@ -20,6 +20,9 @@ public class StopMakingBall : MonoBehaviour
     float Test = 10;
     float HeightOfBall;
     float HeightOfBallUnder;
+    bool used;
+    [SerializeField]
+    Animator animatorcharr;
 
     public void Start()
     {
@@ -29,19 +32,27 @@ public class StopMakingBall : MonoBehaviour
  //       OtherBall.transform.position = OtherBallPosition.transform.position;
         sizeIncrease.enabled = true;
 
+
     }
 
     public void Update()
     {
 
-        
+        PressKeyZ();
 
+
+  
+        
+    }
+
+    private void PressKeyZ()
+    {
         if (Input.GetKeyDown(KeyCode.Z))
         {
 
             sizeIncrease.enabled = false;
             Rigidbody.constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezeRotationZ | RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY;
-           
+
 
             Debug.Log("Z key down");
 
@@ -61,18 +72,25 @@ public class StopMakingBall : MonoBehaviour
                 gameObject.transform.position = new Vector3(PosX, HeightOfBall, PosZ);
                 GameObject.FindWithTag("SnowBallTag").transform.position = new Vector3(PosX, HeightOfBallUnder, PosZ);
                 Debug.Log("There is Ball already");
-                
+
+                if (true)
+                {
+
+                    Debug.Log("This thing works");
+
+                }
 
             }
             else
             {
-                
+
                 Debug.Log("No Ball yet");
                 gameObject.tag = "SnowBallTag";
             }
 
+
+
         }
-        
     }
 
 
