@@ -33,11 +33,14 @@ public class SizeIncrease : MonoBehaviour
         enabled = true;
        
 
-        if (rb.linearVelocity.magnitude > 1)
+        if (rb.linearVelocity.magnitude > 0.8f)
         {
             scaleChange = new Vector3(0.0004f, 0.0004f, 0.0004f);
             positionChange = new Vector3(0.000f, 0.00020f, 0.000f);
             rb.mass += 0.002f;
+            sphere.transform.localScale += scaleChange;
+            sphere.transform.position += positionChange;
+
 
         }
         // https://stackoverflow.com/questions/69831739/how-can-i-get-a-component-of-a-rigidbodies-velocity
@@ -49,19 +52,12 @@ public class SizeIncrease : MonoBehaviour
         //         positionChange = new Vector3(0.0f, 0.005f, 0.0f);
         //         transform.hasChanged = false;
         //    }
-        sphere.transform.localScale += scaleChange;
-        sphere.transform.position += positionChange;
+
 
         // Move upwards when the sphere hits the floor or downwards
         // when the sphere scale extends 1.0f.
-        if (sphere.transform.localScale.y < 0.1f || sphere.transform.localScale.y > 1.0f)
-        {
-            scaleChange = -scaleChange;
-            positionChange = -positionChange;
-           transform.hasChanged = false;
-        }
-        transform.hasChanged = false;
 
+        transform.hasChanged = false;
 
 
 

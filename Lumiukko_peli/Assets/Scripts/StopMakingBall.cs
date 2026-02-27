@@ -7,7 +7,6 @@ using static UnityEditor.Progress;
 
 public class StopMakingBall : MonoBehaviour
 {
-    
 
     SizeIncrease LateUpdate;
     SizeIncrease sizeIncrease;
@@ -20,6 +19,7 @@ public class StopMakingBall : MonoBehaviour
     private Transform target;
     float Test = 10;
     float HeightOfBall;
+    float HeightOfBallUnder;
 
     public void Start()
     {
@@ -49,20 +49,27 @@ public class StopMakingBall : MonoBehaviour
             if ((GameObject.FindWithTag("SnowBallTag")) != null)
 
             {
+
                 Transform Pos = GameObject.FindWithTag("SnowBallTag").transform;
+                GameObject BallUnder = GameObject.FindWithTag("SnowBallTag");
                 float PosX = Pos.position.x;
                 float PosY = Pos.position.y;
                 float PosZ = Pos.position.z;
-                HeightOfBall = PosY + 3;
+                float ScaleY = GameObject.FindWithTag("SnowBallTag").transform.localScale.y;
+                HeightOfBall = gameObject.transform.position.y + ScaleY * 0.9f;
+                HeightOfBallUnder = Pos.position.y;
                 gameObject.transform.position = new Vector3(PosX, HeightOfBall, PosZ);
+                GameObject.FindWithTag("SnowBallTag").transform.position = new Vector3(PosX, HeightOfBallUnder, PosZ);
                 Debug.Log("There is Ball already");
+                
+
             }
             else
             {
                 
                 Debug.Log("No Ball yet");
+                gameObject.tag = "SnowBallTag";
             }
-            gameObject.tag = "SnowBallTag";
 
         }
         

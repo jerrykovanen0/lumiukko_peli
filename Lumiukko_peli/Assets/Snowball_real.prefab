@@ -141,7 +141,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 4
+  m_Constraints: 0
   m_CollisionDetection: 1
 --- !u!114 &4647280293655691575
 MonoBehaviour:
@@ -172,8 +172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec6f54e291f296447a8f79e70d6cc503, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StopMakingBall
-  OtherBall: {fileID: 0}
-  CurrentBall: {fileID: 0}
+  ThisBall: {fileID: 3632917586309287091}
 --- !u!1 &6303715934014766275
 GameObject:
   m_ObjectHideFlags: 0

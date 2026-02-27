@@ -6,6 +6,7 @@ TagManager:
   tags:
   - MainMenu
   - SnowBallTag
+  - Finished
   layers:
   - Default
   - TransparentFX
