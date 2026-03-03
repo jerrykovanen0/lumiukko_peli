@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     // Camera Rotation
     public float mouseSensitivity = 2f;
     private float verticalRotation = 0f;
+    [SerializeField]
     private Transform cameraTransform;
 
     // Ground Movement
@@ -30,7 +31,8 @@ public class Player : MonoBehaviour
     private float raycastDistance;
     [SerializeField]
     Animator animator;
-    
+    [SerializeField]
+    Rigidbody rbCam;
 
     void Start()
     {
@@ -41,15 +43,17 @@ public class Player : MonoBehaviour
         // Set the raycast to be slightly beneath the player's feet
         playerHeight = GetComponent<CapsuleCollider>().height * transform.localScale.y;
         raycastDistance = (playerHeight / 2) + 0.2f;
+        
 
         // Hides the mouse
-    //    Cursor.lockState = CursorLockMode.Locked;
-    //    Cursor.visible = false;
-     //   animator = GetComponent<Animator>();
+        //    Cursor.lockState = CursorLockMode.Locked;
+        //    Cursor.visible = false;
+        //   animator = GetComponent<Animator>();
     }
 
     void Update()
     {
+
         moveHorizontal = Input.GetAxisRaw("Horizontal");
         moveForward = Input.GetAxisRaw("Vertical");
 
@@ -96,6 +100,13 @@ public class Player : MonoBehaviour
 
         float horizontalRotation = Input.GetAxis("Horizontal");
         transform.Rotate(0, horizontalRotation, 0);
+
+
+
+        float VerticalRotation = Input.GetAxis("Mouse Y");
+        cameraTransform.Rotate(-VerticalRotation, 0, 0);
+//        float HorizontalRotation = Input.GetAxis("Mouse X");
+ //       cameraTransform.Rotate(0, HorizontalRotation, 0);
 
 
     }
