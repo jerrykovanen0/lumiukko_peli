@@ -93,6 +93,15 @@ public class StopMakingBall : MonoBehaviour
         }
     }
 
+    public void Replay()
+
+    {
+        gameObject.tag = "Untagged";
+
+
+
+    }
+
 
 
 }

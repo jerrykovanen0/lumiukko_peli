@@ -33,7 +33,7 @@ public class SizeIncrease : MonoBehaviour
         enabled = true;
        
 
-        if (rb.linearVelocity.magnitude > 0.8f)
+        if (rb.linearVelocity.magnitude > 0.6f)
         {
             scaleChange = new Vector3(0.0004f, 0.0004f, 0.0004f);
             positionChange = new Vector3(0.000f, 0.00020f, 0.000f);

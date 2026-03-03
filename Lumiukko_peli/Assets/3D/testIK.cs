@@ -43,7 +43,7 @@ public class testIK : MonoBehaviour
     {
         
         constraint.data.targetPositionWeight = 1.0f;
-        constraint.data.targetRotationWeight = 1.0f;
+        constraint.data.targetRotationWeight = 0.5f;
         animator.SetBool("StartPushing", true);
         Debug.Log("Enter");
 
