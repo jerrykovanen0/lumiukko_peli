@@ -8,6 +8,8 @@ public class FinishGame : MonoBehaviour
     [SerializeField]
     Collider Collider;
     [SerializeField]
+    Collider playerColl;
+    [SerializeField]
     GameObject character;
     [SerializeField]
     GameObject Win;
@@ -18,15 +20,22 @@ public class FinishGame : MonoBehaviour
     {
         if ((GameObject.FindWithTag("SnowBallTag")) != null)
         {
-            Debug.Log("Voitit pelin!");
-            Win.SetActive(true);
-            character.SetActive(false);
+
+                Debug.Log("Voitit pelin!");
+                Win.SetActive(true);
+                character.SetActive(false);
+
+             
         }
         else 
         {
-            Debug.Log("Hävisit pelin");
-            Lose.SetActive(true);
-            character.SetActive(false);
+
+                Debug.Log("Hävisit pelin");
+                Lose.SetActive(true);
+                character.SetActive(false);
+
+        
+
         }
 
 
