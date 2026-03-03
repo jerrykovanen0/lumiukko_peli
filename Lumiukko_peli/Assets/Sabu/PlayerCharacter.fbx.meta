@@ -209,14 +209,14 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0.07195301
+      - time: 0.049131438
         functionName: PlayFootstep
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.92352164
+      - time: 0.91314816
         functionName: PlayFootstep
         data: 
         objectReferenceParameter: {instanceID: 0}
