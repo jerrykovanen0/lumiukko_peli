@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3401549382711273319}
   - component: {fileID: 2607556287542179643}
   - component: {fileID: 4624872312430186720}
+  - component: {fileID: 1135602141230269159}
   m_Layer: 0
   m_Name: Trigger
   m_TagString: Untagged
@@ -26,9 +27,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7556989889185727811}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -66,8 +67,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8aa5cf67402c8c94e93d92a9af4fcd3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::testIK
-  _target: {fileID: 0}
+  _target: {fileID: 7556989889185727811}
   _speed: 10
   _source: {fileID: 0}
+  PlayerCol: {fileID: 0}
   constraint: {fileID: 0}
   Trigger: {fileID: 3401549382711273319}
+  animator: {fileID: 0}
+--- !u!114 &1135602141230269159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7556989889185727811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8aa5cf67402c8c94e93d92a9af4fcd3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::testIK
+  _target: {fileID: 7556989889185727811}
+  _speed: 10
+  _source: {fileID: 0}
+  PlayerCol: {fileID: 0}
+  constraint: {fileID: 0}
+  Trigger: {fileID: 3401549382711273319}
+  animator: {fileID: 0}

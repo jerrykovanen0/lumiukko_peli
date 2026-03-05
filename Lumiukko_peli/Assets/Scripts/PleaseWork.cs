@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
 {
     // Camera Rotation
     public float mouseSensitivity = 2f;
-    private float verticalRotation = 0f;
+ //   private float verticalRotation = 0f;
     [SerializeField]
     private Transform cameraTransform;
 
@@ -25,8 +25,8 @@ public class Player : MonoBehaviour
     public float ascendMultiplier = 2f; // Multiplies gravity for ascending to peak of jump
     private bool isGrounded = true;
     public LayerMask groundLayer;
-    private float groundCheckTimer = 0f;
-    private float groundCheckDelay = 0.3f;
+  //  private float groundCheckTimer = 0f;
+  //  private float groundCheckDelay = 0.3f;
     private float playerHeight;
     private float raycastDistance;
     [SerializeField]

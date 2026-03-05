@@ -3,24 +3,23 @@ using System.Collections.Generic;
 using System.Threading;
 using Unity.VisualScripting;
 using UnityEngine;
-using static UnityEditor.Progress;
 
 public class StopMakingBall : MonoBehaviour
 {
 
-    SizeIncrease LateUpdate;
+  //  SizeIncrease LateUpdate;
     SizeIncrease sizeIncrease;
-    MakeSnowball makeSnowball;
+  //  MakeSnowball makeSnowball;
     Rigidbody Rigidbody;
-    GameObject OtherBall;
-    MakeSnowball newSnowball;
-    GameObject CurrentBall;
-    Transform OtherBallPosition;
-    private Transform target;
-    float Test = 10;
+  //  GameObject OtherBall;
+  //  MakeSnowball newSnowball;
+   // GameObject CurrentBall;
+  //  Transform OtherBallPosition;
+  //  private Transform target;
+  //  float Test = 10;
     float HeightOfBall;
     float HeightOfBallUnder;
-    bool used;
+ //   bool used;
     [SerializeField]
     Animator animatorcharr;
 
