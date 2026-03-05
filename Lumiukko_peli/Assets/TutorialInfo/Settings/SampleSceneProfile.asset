@@ -21,7 +21,7 @@ MonoBehaviour:
     m_Value: 1.22
   intensity:
     m_OverrideState: 1
-    m_Value: 3.4
+    m_Value: 3
   scatter:
     m_OverrideState: 1
     m_Value: 0.092
@@ -90,13 +90,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70afe9e12c7a7ed47911bb608a23a8ff, type: 3}
   m_Name: SplitToning
   m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.SplitToning
-  active: 1
+  active: 0
   shadows:
     m_OverrideState: 1
-    m_Value: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    m_Value: {r: 0.23255605, g: 0.6463788, b: 0.735849, a: 1}
   highlights:
     m_OverrideState: 1
-    m_Value: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    m_Value: {r: 0.6792453, g: 0.53195375, b: 0.20185119, a: 1}
   balance:
     m_OverrideState: 1
     m_Value: 0
@@ -165,7 +165,7 @@ MonoBehaviour:
   active: 1
   intensity:
     m_OverrideState: 1
-    m_Value: 0.057
+    m_Value: 0.025
 --- !u!114 &-471613351005320714
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -250,10 +250,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c01700fd266d6914ababb731e09af2eb, type: 3}
   m_Name: DepthOfField
   m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.DepthOfField
-  active: 1
+  active: 0
   mode:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 1
   gaussianStart:
     m_OverrideState: 1
     m_Value: 10
@@ -382,7 +382,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e021b4c809a781e468c2988c016ebbea, type: 3}
   m_Name: ColorLookup
   m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.ColorLookup
-  active: 1
+  active: 0
   texture:
     m_OverrideState: 1
     m_Value: {fileID: 0}
@@ -650,7 +650,7 @@ MonoBehaviour:
     m_Value: 0
   intensity:
     m_OverrideState: 1
-    m_Value: 0.1
+    m_Value: 0.2
   response:
     m_OverrideState: 1
     m_Value: 0.8
@@ -669,10 +669,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06437c1ff663d574d9447842ba0a72e4, type: 3}
   m_Name: ScreenSpaceLensFlare
   m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.ScreenSpaceLensFlare
-  active: 1
+  active: 0
   intensity:
     m_OverrideState: 1
-    m_Value: 0.89
+    m_Value: 0.41
   tintColor:
     m_OverrideState: 1
     m_Value: {r: 1, g: 1, b: 1, a: 1}
@@ -717,7 +717,7 @@ MonoBehaviour:
     m_Value: 0
   streaksThreshold:
     m_OverrideState: 1
-    m_Value: 0.25
+    m_Value: 0.067
   resolution:
     m_OverrideState: 1
     m_Value: 4

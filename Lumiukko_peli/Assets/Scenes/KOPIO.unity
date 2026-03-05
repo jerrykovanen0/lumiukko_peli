@@ -1282,6 +1282,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Directional Light
       objectReference: {fileID: 0}
+    - target: {fileID: 2246155185713956030, guid: a41f30d066fb3ef4192c5058956cd6f6, type: 3}
+      propertyPath: m_Intensity
+      value: 0.86
+      objectReference: {fileID: 0}
     - target: {fileID: 4643068087012495790, guid: a41f30d066fb3ef4192c5058956cd6f6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2570,6 +2574,10 @@ PrefabInstance:
       propertyPath: _target
       value: 
       objectReference: {fileID: 1064112285}
+    - target: {fileID: 6069846412330905530, guid: 5359bf813ca28f944974b84ed2f82e27, type: 3}
+      propertyPath: m_Volume
+      value: 0.35
+      objectReference: {fileID: 0}
     - target: {fileID: 7010257908310701351, guid: 5359bf813ca28f944974b84ed2f82e27, type: 3}
       propertyPath: m_Name
       value: PlayerCharacter

@@ -80,8 +80,8 @@ Material:
     - _SnowNormalStrength: 0.276
     - _SnowTextureOpacity: 0.011
     - _SnowTextureScale: 0.502
-    - _SparkCutoff: 0.9
-    - _SparkleScale: 0.24
+    - _SparkCutoff: 0.98
+    - _SparkleScale: 0.09
     - _Step: 0.5
     - _Tess: 32
     - _Toon_Ramp_Offset: 0

@@ -65,14 +65,14 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0.08235247
+      - time: 0.055437353
         functionName: PlayFootstep
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.5664491
+      - time: 0.5209004
         functionName: PlayFootstep
         data: 
         objectReferenceParameter: {instanceID: 0}
@@ -166,14 +166,14 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0.06852306
+      - time: 0.03953755
         functionName: PlayFootstep
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.56245804
+      - time: 0.5272614
         functionName: PlayFootstep
         data: 
         objectReferenceParameter: {instanceID: 0}
@@ -216,7 +216,7 @@ ModelImporter:
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.91314816
+      - time: 0.97940075
         functionName: PlayFootstep
         data: 
         objectReferenceParameter: {instanceID: 0}
@@ -252,14 +252,14 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0.47424334
+      - time: 0.13801
         functionName: PlayFootstep
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.7145062
+      - time: 0.6026077
         functionName: PlayFootstep
         data: 
         objectReferenceParameter: {instanceID: 0}
@@ -267,13 +267,6 @@ ModelImporter:
         intParameter: 0
         messageOptions: 0
       - time: 0.7768256
-        functionName: PlayFootstep
-        data: 
-        objectReferenceParameter: {instanceID: 0}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
-      - time: 0.15250275
         functionName: PlayFootstep
         data: 
         objectReferenceParameter: {instanceID: 0}
